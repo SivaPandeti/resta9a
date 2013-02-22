@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Hotel:</b>
+  <%= @room.hotel.hotel_name %>
+</p>
+<p>
+  <b>Room name:</b>
+  <%= @room.room_name %>
+</p>
+<p>
+  <b>Room type:</b>
+  <%= @room.room_type %>
+</p>
+<p>
+  <b>Room rate:</b>
+  <%= @room.room_rate %>
+</p>
+
+
+
+
+
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

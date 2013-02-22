@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Customer:</b>
+  <%= @sale.customer.first_name %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%= @sale.product.model %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @sale.quantity %>
+</p>
+
+<p>
+  <b>Credit card no:</b>
+  <%= @sale.credit_card_no %>
+</p>
+
+<p>
+  <b>Discount:</b>
+  <%= @sale.discount %>
+</p>
+
+x
+
+
+<%= link_to 'Edit', edit_sale_path(@sale) %> |
+<%= link_to 'Back', sales_path %>

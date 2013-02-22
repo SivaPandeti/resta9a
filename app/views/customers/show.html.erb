@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @customer.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @customer.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @customer.phone %>
+</p>
+<p>
+  <b>Password:</b>
+  <%= @customer.password %>
+</p>
+<p>
+  <b>Secret Question:</b>
+  <%= @customer.secret_question %>
+</p>
+<p>
+  <b>Secret Answer:</b>
+  <%= @customer.secret_answer %>
+</p>
+<p>
+  <b>Default Credit Card Number:</b>
+  <%= @customer.default_credit_card_no %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

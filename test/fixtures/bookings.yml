@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  booking_date: 2013-02-18
+  booking_length: 1
+  room: 
+  customer: 
+  hotel: 
+
+two:
+  booking_date: 2013-02-18
+  booking_length: 1
+  room: 
+  customer: 
+  hotel: 

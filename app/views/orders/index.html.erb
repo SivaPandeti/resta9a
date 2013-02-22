@@ -1,0 +1,29 @@
+<h1>Restaurant Orders</h1>
+<%= link_to 'Add New Order', new_order_path %>
+<br /><br />
+<table class="table table-striped">
+  <tr>
+    <th>Order_ID</th>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.id %></td>
+    <td><%= order.item.name %></td>
+    <td><%= order.quantity %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= will_paginate %>

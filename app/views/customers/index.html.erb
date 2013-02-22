@@ -1,0 +1,39 @@
+<h1>Customers</h1>
+
+<%= link_to 'Add New Customer', new_customer_path %>
+<br /><br />
+<table class="table table-striped">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Password</th>
+    <th>Secret Question</th>
+    <th>Secret Answer</th>
+    <th>Default Credit Card Number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td><%= customer.first_name %></td>
+    <td><%= customer.last_name %></td>
+    <td><%= customer.email %></td>
+    <td><%= customer.phone %></td>
+    <td><%= customer.password %></td>
+    <td><%= customer.secret_question %></td>
+    <td><%= customer.secret_answer %></td>
+    <td><%= customer.default_credit_card_no %></td>
+    <td><%= link_to 'Show', customer %></td>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= will_paginate %>
